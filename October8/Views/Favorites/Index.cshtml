@@ -1,0 +1,19 @@
+﻿@model TeamsViewModel
+@{
+    ViewData["Title"] = "Favorites";
+}
+
+<div class="text-center mb-4">
+    <h2>My Favorites</h2>
+    <form asp-action="Delete" method="post">
+        <a asp-action="Index" asp-controller="Home"
+           class="btn btn-primary"
+           asp-route-activeConf="@Model.ActiveConf"
+           asp-route-activeDiv="@Model.ActiveDiv">
+            Back to Home Page
+        </a>
+        <button type="submit" class="btn btn-primary">
+            Clear Favorites
+        </button>
+    </form>
+</div>
